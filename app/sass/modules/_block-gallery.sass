@@ -1,0 +1,124 @@
+.inner__gallery
+
+.my-gallery
+
+.my-gallery__item
+  position: relative
+  margin: 0
+  overflow: hidden
+  cursor: pointer
+  h5
+    color: var(--t-per-bright-light)
+    small
+      color: var(--t-per-default-light)
+  +MQ(XL)
+    height: 50vh
+    img
+      width: auto
+      height: 50vh
+
+.my-gallery__link
+  +MQ(XL)
+    position: relative
+    float: left
+    width: 100%
+    height: 100%
+    overflow: hidden
+    text-align: center
+    .picture
+      +position(absolute, 0 null null 0)
+      width: 100%
+      height: 100%
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+      transition: background-position .5s
+      transition: transform .7s , opacity .5s ease-in-out
+
+.my-gallery__image
+  opacity: 1
+  +MQ(XL)
+    opacity: 0
+
+.my-gallery__description
+  +position(absolute, null null 2rem 2rem)
+  width: calc(100% - 4rem)
+  backdrop-filter: blur(14px)
+  border-radius: var(--_radius-s)
+  padding: 2.4rem 3rem
+  text-align: left
+  p
+    display: none
+  +MQ(XL)
+    bottom: auto
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 0
+    padding: 0
+    text-align: center
+    opacity: 0
+    transition: opacity 0.5s
+    h5
+      position: absolute
+      +center(y)
+      width: 100%
+      padding: 0 3rem
+      opacity: 0
+      transition: opacity 0.5s
+.my-gallery__item
+  +MQ(XL)
+    .no-touch &:hover
+      .my-gallery__description
+        opacity: 1
+        h5
+          opacity: 1
+
+.pswp__caption__center
+  padding: 2.2rem
+  h5
+    font: normal 500 3rem/1.2 $accent-font
+    text-transform: uppercase
+    color: var(--t-per-bright-light)
+    margin-bottom: 1.4rem
+    small
+      display: block
+      margin-top: 0.3rem
+      font: normal 400 1.6rem/1.2 $accent-font
+      letter-spacing: 0.04rem
+      color: var(--t-per-default-light)
+  p
+    font: normal 400 1.8rem/1.5 $default-font
+    color: var(--t-per-muted-light)
+
+.pswp__counter
+  font: normal 400 1.8rem/44px $accent-font
+  color: var(--t-per-default-light)
+
+.pswp__button--close
+  opacity: 1
+
+.pswp__button--arrow--left::before, .pswp__button--arrow--right::before
+  width: 44px
+  height: 44px
+
+.pswp__button--arrow--left:before
+  left: 0
+  background-position: -132px -44px
+
+.pswp__button--arrow--right:before
+  right: 0
+  background-position: -88px -44px
+
+.pswp__bg
+  background: var(--per-base)
+
+.pswp__caption, .pswp__top-bar
+  background-color: rgba(0,0,0,.3)
+
+.pswp__button--close
+  position: relative
+  background-color: var(--secondary)
+  &:active
+    opacity: 1

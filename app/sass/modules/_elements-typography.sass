@@ -1,0 +1,257 @@
+.elements-spacer
+  padding-bottom: 6rem
+  &:first-of-type
+    padding-top: 6rem
+  
+h1
+  font: normal 500 4.6rem/1.08 $accent-font
+  text-transform: uppercase
+  color: var(--t-bright)
+  .colored
+    color: var(--accent)
+  +MQ(M)
+    font-size: 7.4rem
+  +MQ(XXL)
+    font-size: 8.4rem
+  +MQ(XXXL)
+    font-size: 10rem
+
+.typed-cursor
+  position: relative
+  display: inline-block
+  white-space: nowrap
+  color: var(--t-bright)
+  color: rgba(255,255,255,0)
+  &::before
+    content: ''
+    display: block
+    +position(absolute, null 0 3px null)
+    width: 4px
+    height: 41px
+    background-color: var(--accent)
+  +MQ(M)
+    &::before
+      width: 6px
+      height: 67px
+      +position(absolute, null 0 4px null)
+  +MQ(XXL)
+    &::before
+      width: 8px
+      height: 78px
+      +position(absolute, null 0 3px null)
+  +MQ(XXXL)
+    &::before
+      width: 10px
+      height: 92px
+      +position(absolute, null 0 4px null)
+
+.headline__subtitle
+  display: inline-block
+  font: normal 400 2rem/1.2 $default-font
+  color: var(--t-bright)
+  margin-bottom: 2.8rem
+  +MQ(M)
+    margin-bottom: 3.2rem
+  +MQ(XXL)
+    font-size: 2.4rem
+    margin-bottom: 3.8rem
+
+.headline__btnholder
+  margin-top: 2.6rem
+
+.headline__numblock
+  margin-top: 3.5rem
+  +MQ(M)
+    margin-top: 3.7rem
+  +MQ(XXL)
+    margin-top: 4.6rem
+
+.numblock
+  padding: 1.4rem 1.8rem
+  margin-right: 1rem
+  border: 1px solid var(--strokes)
+  border-radius: var(--_radius-s)
+  &:last-of-type
+    margin-right: 0
+  +MQ(M)
+    padding: 0.1rem 0 0.6rem 0
+    margin-right: 0
+    border-radius: 0
+    border: none
+    padding-right: 3rem
+    border-right: 1px solid var(--deviders)
+    &:last-of-type
+      border-right: none
+      padding-right: 0
+      padding-left: 3rem
+
+.numblock__number
+  display: block
+  font: normal 400 3rem/1.08 $accent-font
+  text-transform: uppercase
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 4.2rem
+    margin-right: 1.4rem
+  +MQ(XXL)
+    font-size: 4.6rem
+  +MQ(XXXL)
+    font-size: 5rem
+
+.numblock__descr
+  display: block
+  font: normal 400 1.6rem/1.2 $default-font
+  color: var(--t-muted)
+  margin-top: 0.3rem
+  +MQ(XXL)
+    font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 2rem
+    margin-top: 0.4rem
+
+h2
+  font: normal 500 4rem/1.1 $accent-font
+  text-transform: uppercase
+  color: var(--t-bright)
+  .colored
+    color: var(--accent)
+  +MQ(M)
+    font-size: 6rem
+  +MQ(XXL)
+    font-size: 6.4rem
+  +MQ(XXXL)
+    font-size: 7rem
+
+.section__subtitle
+  display: inline-block
+  font: normal 400 2rem/1.2 $default-font
+  color: var(--t-bright)
+  margin-bottom: 2.8rem
+  +MQ(M)
+    margin-bottom: 3.4rem
+  +MQ(XXL)
+    margin-bottom: 4.1rem
+    font-size: 2.4rem
+
+.section__text
+  margin-top: 2.6rem
+  +MQ(M)
+    margin-top: 3.4rem
+  +MQ(XXL)
+    margin-top: 4.1rem
+
+h3
+  font: normal 500 3.6rem/1.14 $accent-font
+  text-transform: uppercase
+  color: var(--t-bright)
+  .colored
+    color: var(--accent)
+  +MQ(M)
+    font-size: 5.2rem
+  +MQ(XXL)
+    font-size: 5.6rem
+
+.block__text
+  margin-top: 2.5rem
+  +MQ(M)
+    margin-top: 3rem
+  +MQ(XXL)
+    margin-top: 4rem
+
+h4
+  font: normal 500 3.6rem/1.2 $accent-font
+  text-transform: uppercase
+  color: var(--t-bright)
+  .colored
+    color: var(--accent)
+
+h5
+  font: normal 500 3rem/1.2 $accent-font
+  text-transform: uppercase
+  color: var(--t-default)
+  small
+    display: block
+    margin-top: 0.3rem
+    font: normal 400 1.6rem/1.2 $accent-font
+    letter-spacing: 0.04rem
+    color: var(--accent)
+  .colored
+    color: var(--accent)
+
+h6
+  font: normal 500 2.6rem/1.2 $accent-font
+  text-transform: uppercase
+  color: var(--t-default)
+  .colored
+    color: var(--accent)
+
+p
+  font: normal 400 2rem/1.5 $default-font
+  color: var(--t-muted)
+  &.small
+    font-size: 1.8rem
+    a
+      font: normal 400 1.8rem/1.5 $default-font
+      color: var(--t-muted)
+  +MQ(XXL)
+    font-size: 2.4rem
+    &.small
+      font-size: 1.8rem
+      a
+        font: normal 400 1.8rem/1.5 $default-font
+        color: var(--t-muted)
+  
+.tools
+  font: normal 500 3rem/1.2 $accent-font
+  text-transform: uppercase
+  color: var(--t-default)
+  +MQ(M)
+    font-size: 3.6rem
+
+.text-link
+  color: inherit
+  color: var(--t-muted)
+  text-decoration: none
+  background: linear-gradient(to right, rgba(var(--t-muted-rgb), 0.5), rgba(var(--t-muted-rgb), 0.5)), linear-gradient(to right, rgba(var(--accent-rgb), 1), rgba(var(--accent-rgb), 1))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size calc(var(--_animspeed-medium) + 0.1s), color var(--_animspeed-medium)
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+
+.contact-link
+  color: inherit
+  color: var(--t-muted)
+  text-decoration: none
+  background: linear-gradient(to right, rgba(var(--t-muted-rgb), 0.0), rgba(var(--t-muted-rgb), 0.0)), linear-gradient(to right, rgba(var(--accent-rgb), 1), rgba(var(--accent-rgb), 1))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size calc(var(--_animspeed-medium) + 0.1s), color var(--_animspeed-medium)
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+
+.popup-title__title
+  font: normal 500 3.6rem/1.14 $accent-font
+  text-transform: uppercase
+  color: var(--t-per-bright-light)
+  .colored
+    color: var(--accent)
+  +MQ(M)
+    font-size: 5.2rem
+  +MQ(XXL)
+    font-size: 5.6rem
+
+.popup-title__text
+  margin-top: 2.5rem
+  color: var(--t-per-muted-light)
+  a
+    color: var(--t-per-muted-light)
+  +MQ(M)
+    margin-top: 3rem
+  +MQ(XXL)
+    font-size: 2.4rem
+    margin-top: 4rem

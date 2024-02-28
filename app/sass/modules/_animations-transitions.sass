@@ -1,0 +1,133 @@
+body
+  .top-controls
+    opacity: 0
+    transition: opacity var(--_animspeed-slow) 0.5s ease-in
+  &.loaded
+    .top-controls
+      opacity: 1
+
+.main
+  .intro__header,
+  .intro__bottomline,
+  .media__badge
+    opacity: 0
+  .headline__subtitle,
+  .headline__title,
+  .headline__numblock
+    opacity: 0
+    transform: translateY(2rem)
+  .main__content
+    transform: translateX(0)
+    transition: transform var(--_animspeed-slow) ease-in-out
+  &.animate-in
+    .headline__subtitle
+      opacity: 1
+      transform: translateY(0)
+      transition: transform var(--_animspeed-medium) 0s, opacity var(--_animspeed-medium) 0s var(--_animbezier)
+    .headline__title
+      opacity: 1
+      transform: translateY(0)
+      transition: transform var(--_animspeed-medium) 0.2s, opacity var(--_animspeed-medium) 0.2s var(--_animbezier)
+    .headline__numblock
+      opacity: 1
+      transform: translateY(0)
+      transition: transform var(--_animspeed-medium) 0.4s, opacity var(--_animspeed-medium) 0.4s var(--_animbezier)
+    .intro__header,
+    .intro__bottomline,
+    .media__badge
+      opacity: 1
+      transition: opacity var(--_animspeed-slow) 0.5s ease-in
+  &.animate-out
+    .main__content
+      transform: translateX(-100%)
+  +MQ(XL)
+    .main__intro
+      transform: translateY(0)
+      transition: transform var(--_animspeed-slow) ease-in-out
+    .main__media
+      transform: translateY(0)
+      transition: transform var(--_animspeed-slow) ease-in-out
+    &.animate-out
+      .main__content
+        transform: translateX(0)
+      .main__intro
+        transform: translateY(100%)
+      .main__media
+        transform: translateY(-100%)
+
+.inner
+  opacity: 0
+  visibility: hidden
+  transition: 0s var(--_animspeed-slow)
+  .inner__content
+    transform: translateX(100%)
+    transition: transform var(--_animspeed-slow) ease-in-out
+  .inner__controls
+    opacity: 0
+    transform: translateX(12rem)
+    transition: all var(--_animspeed-medium) ease-in-out
+  &.animate-in
+    opacity: 1
+    visibility: visible
+    transition: 0s 0s
+    .inner__content
+      transform: translateX(0)
+    .inner__controls
+      opacity: 1
+      transform: translateX(0)
+      transition: opacity var(--_animspeed-medium) var(--_animspeed-slow), transform 0s 0s ease-in-out
+  +MQ(XL)
+    .inner__content
+      transform: translateX(0)
+    .inner__controls
+      transform: translateX(0)
+      transform: translateY(12rem)
+      transition: all var(--_animspeed-medium) ease-in-out
+    .inner__media
+      transform: translateY(-100%)
+      transition: transform var(--_animspeed-slow) ease-in-out
+    .inner__info
+      transform: translateY(100%)
+      transition: transform var(--_animspeed-slow) ease-in-out
+    &.animate-in
+      opacity: 1
+      visibility: visible
+      transition: 0s 0s
+      .inner__controls
+        opacity: 1
+        transform: translateY(0)
+        transition: opacity var(--_animspeed-medium) var(--_animspeed-slow), transform 0s 0s ease-in-out
+      .inner__media
+        transform: translateY(0)
+        transition: var(--_animspeed-slow) ease-in-out
+      .inner__info
+        transform: translateY(0)
+        transition: var(--_animspeed-slow) ease-in-out
+
+.popup
+  opacity: 0
+  visibility: hidden
+  transition: visibility 0s 0s, opacity var(--_animspeed-medium) 0s
+  .popup__content
+    opacity: 0
+    transform: translateY(30px)
+    transition: opacity var(--_animspeed-slow), transform var(--_animspeed-slow) var(--_animbezier)
+  &.animate-in
+    opacity: 1
+    visibility: visible
+    .popup__content
+      opacity: 1
+      transform: translateY(0)
+  &.animate-out
+    opacity: 0
+    visibility: hidden
+    transition: opacity var(--_animspeed-medium) var(--_animspeed-slow), visibility 0s calc(var(--_animspeed-slow) + 0.3s)
+    .popup__content
+      opacity: 0
+      transform: translateY(-30px)
+
+.popup-close
+  transform: scale3d(0,0,0)
+  transition: color var(--_animspeed-medium), transform var(--_animspeed-medium) var(--_animbezier)
+  &.is-scaled-up
+    transform: scale3d(1,1,1)

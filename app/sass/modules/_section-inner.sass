@@ -1,0 +1,118 @@
+.inner
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  background-color: transparent
+  z-index: 4
+  +MQ(XL)
+    overflow: hidden
+
+.inner__controls
+  +position(fixed, 2rem null null 2rem)
+  z-index: 5
+  +MQ(M)
+    top: 4rem
+    left: 6rem
+  +MQ(XL)
+    left: calc(50% + 6rem)
+  +MQ(XXXL)
+    left: calc(50% + 8rem)
+
+.inner__content
+  position: relative
+  padding-top: 70px
+  background-color: var(--base-inner)
+  +MQ(M)
+    padding-top: 90px
+  +MQ(XL)
+    padding-top: 0
+    background-color: transparent
+    height: 100%
+    min-height: 600px
+    overflow-y: auto
+    overflow-x: hidden
+    overflow: hidden
+
+.inner__info,
+.inner__media
+  position: relative
+  +MQ(XL)
+    height: 100%
+
+.inner__info
+  background-color: var(--base-inner)
+  overflow-y: auto
+  overflow-x: hidden
+  +MQ(XL)
+    padding-top: 9rem
+  +MQ(XXL)
+    padding-top: 9.4rem
+  +MQ(XXXL)
+    padding-top: 10rem
+
+.inner__blocks
+  position: relative
+  padding: 8rem 0
+  +MQ(M)
+    padding: 10rem 0
+  +MQ(XXL)
+    padding: 11rem 0
+
+.inner__container
+  position: relative
+  margin-bottom: 8rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(M)
+    margin-bottom: 10rem
+  +MQ(XXL)
+    margin-bottom: 11rem
+
+.content-block
+  position: relative
+  padding: 0 2rem
+  +MQ(M)
+    padding: 0 6rem
+  +MQ(XXXL)
+    padding: 0 8rem
+
+.inner__media
+  position: relative
+  height: 60vh
+  min-height: 500px
+  border-top-left-radius: var(--_radius-m)
+  border-top-right-radius: var(--_radius-m)
+  overflow: hidden
+  &.media-autoheight
+    height: auto
+  +MQ(M)
+    min-height: 768px
+    border-top-left-radius: var(--_radius-l)
+    border-top-right-radius: var(--_radius-l)
+  +MQ(L)
+    min-height: 1024px
+  +MQ(XL)
+    height: 100%
+    min-height: 0
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+.innermedia__content
+  position: relative
+  width: 100%
+  height: 100%
+  &.autoheight-content
+    height: auto
+  +MQ(XL)
+    &.autoheight-content
+      height: 100%
+
+.innermedia__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
